@@ -19,5 +19,5 @@ def pytest_configure(config):
     app.config['TESTING'] = True
     app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase_test'
     with app.app_context():
+        mongo.cx.drop_database('mydatabase_test')
         mongo.init_app(app)
-        mongo.db.key_value_pairs.delete_many({})
