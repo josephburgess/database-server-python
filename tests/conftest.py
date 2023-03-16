@@ -1,3 +1,4 @@
+from app import create_app, mongo
 import pytest
 from app import mongo, create_app
 
@@ -11,3 +12,12 @@ def client():
     yield client
     with app.app_context():
         mongo.db.key_value_pairs.delete_one({'_id': 'test'})
+
+
+def pytest_configure(config):
+    app = create_app()
+    app.config['TESTING'] = True
+    app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase_test'
+    with app.app_context():
+        mongo.init_app(app)
+        mongo.db.key_value_pairs.delete_many({})
