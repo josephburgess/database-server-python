@@ -1,6 +1,6 @@
 # Python Database Server
 
-This is a simple key-value store application built using Python, Flask, and MongoDB. The application provides two endpoints to set and get key-value pairs.
+This is a simple key-value store application built using Python, Flask, and MongoDB. The application provides two endpoints to set and get key-value pairs and add them to a MongoDB database.
 
 ## Requirements
 
