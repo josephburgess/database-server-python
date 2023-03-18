@@ -1,6 +1,5 @@
 from app import create_app, mongo
 import pytest
-from app import mongo, create_app
 
 
 @pytest.fixture
