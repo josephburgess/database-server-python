@@ -13,11 +13,6 @@ This is a simple key-value store application built using Python, Flask, and Mong
 
   1. Clone this repository:
 
-```bash
-git clone https://github.com/yourusername/simple-key-value-store.git
-cd simple-key-value-store
-```
-
   2. Create a virtual environment and install the required packages:
 
 ```bash
@@ -26,7 +21,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-  3. Update the MONGO_URI in app.py to match your MongoDB configuration:
+  3. Update the MONGO_URI in app.py to match your MongoDB configuration, you can use your own custom database or use the below:
 
 ```python
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
@@ -37,10 +32,10 @@ app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
   1. Start the application by running:
   
 ```bash
-python app.py
+flask run
 ```
 
-  The application will be accessible at `http://localhost:5000`.
+  The application will be accessible at `http://127.0.0.1:5000`.
 
 ## API Endpoints
 
@@ -71,7 +66,7 @@ python app.py
 ### Set a key-value pair:
 
 ```bash
-curl -X PUT "http://localhost:5000/set?key=my_key&value=my_value"
+curl -X PUT "http://127.0.0.1:5000/set?key=my_key&value=my_value"
 ```
 
 Response:
@@ -84,7 +79,7 @@ Response:
 ### Get a key-value pair:
 
 ```bash
-curl "http://localhost:5000/get?key=my_key"
+curl "http://127.0.0.1:5000/get?key=my_key"
 ```
 
 Response:
