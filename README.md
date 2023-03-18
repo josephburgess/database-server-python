@@ -15,25 +15,25 @@ This is a simple key-value store application built using Python, Flask, and Mong
 
   2. Create a virtual environment and install the required packages:
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
 
   3. Update the MONGO_URI in app.py to match your MongoDB configuration, you can use your own custom database or use the below:
 
-```python
-app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
-```
+    ```python
+    app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
+    ```
 
 ## Running the application
 
   1. Start the application by running:
   
-```bash
-flask run
-```
+    ```bash
+    flask run
+    ```
 
   The application will be accessible at `http://127.0.0.1:5000`.
 
@@ -65,38 +65,38 @@ flask run
 
 ### Set a key-value pair:
 
-```bash
-curl -X PUT "http://127.0.0.1:5000/set?key=my_key&value=my_value"
-```
+    ```bash
+    curl -X PUT "http://127.0.0.1:5000/set?key=my_key&value=my_value"
+    ```
 
 Response:
-```bash
-{
-  "message": "Created"
-}
-```
+    ```bash
+    {
+      "message": "Created"
+    }
+    ```
 
 ### Get a key-value pair:
 
-```bash
-curl "http://127.0.0.1:5000/get?key=my_key"
-```
+    ```bash
+    curl "http://127.0.0.1:5000/get?key=my_key"
+    ```
 
 Response:
-```bash
-{
-  "message": "OK",
-  "value": "my_value"
-}
-```
+    ```bash
+    {
+      "message": "OK",
+      "value": "my_value"
+    }
+    ```
 
 ## Testing
 I used Pytest for testing this project and achieved 100% test coverage. 
 
 To run the test suite for this project, navigate to the project directory in your terminal and run the command:
 
-```bash
-pytest
-```
+    ```bash
+    pytest
+    ```
 
 This will run all of the test cases in the tests directory.
