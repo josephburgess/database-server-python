@@ -13,32 +13,32 @@ This is a simple key-value store application built using Python, Flask, and Mong
 
   1. Clone this repository:
 
-    ```bash
-    git clone https://github.com/yourusername/simple-key-value-store.git
-    cd simple-key-value-store
-    ```
+```bash
+git clone https://github.com/yourusername/simple-key-value-store.git
+cd simple-key-value-store
+```
 
   2. Create a virtual environment and install the required packages:
 
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    ```
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
   3. Update the MONGO_URI in app.py to match your MongoDB configuration:
 
-  ```python
-  app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
-  ```
+```python
+app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
+```
 
 ## Running the application
 
   1. Start the application by running:
   
-  ```bash
-  python app.py
-  ```
+```bash
+python app.py
+```
 
   The application will be accessible at `http://localhost:5000`.
 
@@ -70,38 +70,38 @@ This is a simple key-value store application built using Python, Flask, and Mong
 
 ### Set a key-value pair:
 
-  ```bash
-  curl -X PUT "http://localhost:5000/set?key=my_key&value=my_value"
-  ```
+```bash
+curl -X PUT "http://localhost:5000/set?key=my_key&value=my_value"
+```
 
 Response:
-  ```bash
-  {
-    "message": "Created"
-  }
-  ```
+```bash
+{
+  "message": "Created"
+}
+```
 
 ### Get a key-value pair:
 
-  ```bash
-  curl "http://localhost:5000/get?key=my_key"
-  ```
+```bash
+curl "http://localhost:5000/get?key=my_key"
+```
 
 Response:
-  ```bash
-  {
-    "message": "OK",
-    "value": "my_value"
-  }
-  ```
+```bash
+{
+  "message": "OK",
+  "value": "my_value"
+}
+```
 
 ## Testing
 I used Pytest for testing this project and achieved 100% test coverage. 
 
 To run the test suite for this project, navigate to the project directory in your terminal and run the command:
 
-  ```bash
-  pytest
-  ```
+```bash
+pytest
+```
 
 This will run all of the test cases in the tests directory.
