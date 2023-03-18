@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from app import mongo
+from ..app import mongo
 
 
 def set_key_value():
