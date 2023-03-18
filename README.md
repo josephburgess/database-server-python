@@ -46,25 +46,25 @@ python app.py
 
 ### Set Key-Value
 
-    - Endpoint: /set
-    - Method: PUT
-    - Query Parameters:
-        - key: The key to set the value for
-        - value: The value to store for the key
-    - Returns:
-        - 201 Created: Key-value pair created successfully
-        - 400 Bad Request: Missing or invalid input
+  - Endpoint: /set
+  - Method: PUT
+  - Query Parameters:
+    - key: The key to set the value for
+    - value: The value to store for the key
+  - Returns:
+    - 201 Created: Key-value pair created successfully
+    - 400 Bad Request: Missing or invalid input
 
 ### Get Key-Value
 
-    - Endpoint: /get
-    - Method: GET
-    - Query Parameters:
-        - key: The key to retrieve the value for
-    - Returns:
-        - 200 OK: Key-value pair found and returned
-        - 400 Bad Request: Missing or invalid input
-        - 404 Not Found: Key not found
+  - Endpoint: /get
+  - Method: GET
+  - Query Parameters:
+    - key: The key to retrieve the value for
+  - Returns:
+    - 200 OK: Key-value pair found and returned
+    - 400 Bad Request: Missing or invalid input
+    - 404 Not Found: Key not found
 
 ## Examples
 
